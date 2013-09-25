@@ -11,7 +11,7 @@ class Api::V1::EntriesController < ApplicationController
 
   private
 
-  def epic_params
+  def entry_params
     params.require(:entry).permit(:name)
   end
 end
