@@ -6,4 +6,40 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Entry.create([{ name: 'Using rails as an api' }, { name: 'Using Ember-data for persistence' }])
+
+Authors.create({ name: 'John', name: 'Art' })
+
+Fields.create([
+  {
+    name: 'Breakfast',
+    text: 'Waffles.'
+  },
+  {
+    name: 'Lunch',
+    text: 'Broccoli beef and a thai iced tea.'
+  },
+  {
+    name: 'Dinner',
+    text: 'Steak, potatoes and grilled veggies.'
+  },
+  {
+    name: 'Desert',
+    text: 'Tiramisu and a cappuccino.'
+  },
+  {
+    name: 'Travel Log',
+    text: 'LAX to SFO and Back for Dinner'
+  }
+])
+
+
+Entry.create([
+  {
+    name: 'Eating like a boss.',
+    author: Author.find_by name: 'Art'
+  },
+  {
+    name: 'A Day Trip to the Bay'
+    author: Author.find_by name: 'John'
+  }
+])
